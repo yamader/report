@@ -1,0 +1,44 @@
+\documentclass[a4paper]{ltjsarticle}
+
+\usepackage[margin=20mm,bottom=25mm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{siunitx}
+\usepackage{here}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage[nobreak]{cite}
+
+\newcommand{\maru}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
+
+\makeatletter
+\newcommand{\figcap}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tabcap}[1]{\def\@captype{table}\caption{#1}}
+\makeatother
+
+\usepackage{luatexja-fontspec}
+\setmainfont[
+  Ligatures=TeX,
+]{Times New Roman}
+\setmainjfont[
+  YokoFeatures={JFM=prop},
+  CharacterWidth=Proportional,
+  Kerning=On,
+]{IPAPMincho}
+
+\begin{document}
+
+\begin{enumerate}[label=\maru{\arabic*}]
+  \item アイテム
+\end{enumerate}
+
+\begin{thebibliography}{99}
+  % \cite{hoge}で参照
+  \bibitem{book1} 著者 : 書名，出版社，2022，p.114-514
+  \bibitem{site1} タイトル，(最終閲覧日2022年5月15日)，\url{http://example.net}
+\end{thebibliography}
+\end{document}
