@@ -6,7 +6,7 @@
 
 LuaLaTeXで使う．
 
-## Satysfi : `template.satyh`
+## SATySFi : `template.satyh`
 
 ```
 @import: ../template
