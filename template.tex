@@ -6,8 +6,10 @@
 \usepackage{amssymb}
 
 \usepackage{siunitx}
-\usepackage{here}
+\usepackage{listings}
+\usepackage{xcolor}
 \usepackage{url}
+\usepackage{here}
 \usepackage{multirow}
 \usepackage{enumitem}
 \usepackage{wrapfig}
@@ -30,11 +32,32 @@
   Kerning=On,
 ]{IPAPMincho}
 
+\renewcommand{\lstlistingname}{ソースコード}
+\lstset{
+  basicstyle  = \ttfamily,
+  columns     = fixed,
+  basewidth   = .5em,
+  numbers     = left,
+  numberstyle = \small,
+  frame       = tb,
+  % 色
+  commentstyle=\color{green!30!darkgray},
+  keywordstyle=\color{blue},
+  stringstyle=\color{violet!60!gray},
+}
+
 \begin{document}
 
 \begin{enumerate}[label=\maru{\arabic*}]
   \item アイテム
 \end{enumerate}
+
+\begin{lstlisting}[language=C++, caption=ほげ, label=lst:hoge]
+// 挨拶は大事
+void sayHello() {
+  puts("hello, world");
+}
+\end{lstlisting}
 
 \begin{thebibliography}{99}
   % \cite{hoge}で参照
