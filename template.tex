@@ -1,5 +1,7 @@
 \documentclass[a4paper]{ltjsarticle}
 
+\usepackage{kcctd-report-lualatex}
+
 \usepackage[margin=20mm,bottom=25mm]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -32,13 +34,13 @@
   Kerning=On,
 ]{IPAPMincho}
 
-\renewcommand{\lstlistingname}{ソースコード}
+\renewcommand{\lstlistingname}{リスト}
 \lstset{
-  basicstyle  = \ttfamily,
+  basicstyle  = \ttfamily \small,
   columns     = fixed,
   basewidth   = .5em,
   numbers     = left,
-  numberstyle = \small,
+  numberstyle = \ttfamily \small,
   frame       = tb,
   % 色
   commentstyle=\color{green!30!darkgray},
@@ -46,7 +48,23 @@
   stringstyle=\color{violet!60!gray},
 }
 
+\title{LuaLaTeXを用いたレポートの作成}
+\adviser{ほげふが 太郎 教授}
+
+\sdate{令和4年12月25日}
+\edate{令和4年12月25日}
+\fdate{令和4年12月25日}
+\rdate{}
+
+\grade{3}
+\anumber{9999}
+\gnumber{9999}
+\name{ほげふが Jr.}
+\jname{}
+\repcomment{}
+
 \begin{document}
+\maketitle
 
 \begin{enumerate}[label=\maru{\arabic*}]
   \item アイテム
