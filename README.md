@@ -1,10 +1,14 @@
 # report
 
-個人用のテンプレート集．
+個人用のテンプレート集。
+
+## Typst : `template.typ`
+
+Typstで使う。
 
 ## LaTeX : `template.tex`
 
-LuaLaTeXで使う．
+LuaLaTeXで使う。
 
 ## SATySFi : `template.satyh`
 
@@ -12,5 +16,5 @@ LuaLaTeXで使う．
 @import: ../template
 ```
 
-で使えるっぽい．
-テンプレートというよりクラスファイル．
+で使えるっぽい。
+テンプレートというよりクラスファイル。
