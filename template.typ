@@ -1,4 +1,5 @@
 #import "@preview/codelst:2.0.0": sourcecode
+#import "@preview/tablex:0.0.7": tablex, hlinex
 
 #set text(lang: "ja")
 #set page(numbering: "1")
@@ -31,5 +32,7 @@
 #let fullw(body) = box(width: 100%, align(start, body))
 
 ////////////////////////////////////////////////////////////////
+
+#set enum(numbering: "1.")
 
 = 目的
