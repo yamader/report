@@ -1,38 +1,59 @@
-#import "@preview/codelst:2.0.0": sourcecode
-#import "@preview/tablex:0.0.7": tablex, hlinex
+#import "@preview/codelst:2.0.2": sourcecode
 
 #set text(lang: "ja")
 #set page(numbering: "1")
 #set heading(numbering: "1.1")
+#set par(first-line-indent: (amount: 1em, all: true))
+#show heading: set block(below: 1em)
 
-#set text(font: (
-  "Times New Roman",
-  "Noto Serif CJK JP",
-))
-#show heading: set text(font: (
-  "Times New Roman",
-  "Noto Sans CJK JP",
-))
-#show raw: set text(font: (
-  "UDEV Gothic 35NFLG",
-  "Ubuntu Mono",
-  "Noto Sans Mono CJK JP",
-))
+#let sans = ("Noto Sans CJK JP",)
+#let serif = ("Times New Roman", "Noto Serif CJK JP")
+#let mono = ("Firge35Nerd Console",)
 
-// https://github.com/typst/typst/issues/311
-#set par(first-line-indent: 1em)
-#let afterpar(pad, it) = { it; par(text(size: .5em, "")); v(pad) }
-#show heading: afterpar.with(0em)
-#show figure: afterpar.with(-1.2em)
-
-#set enum(tight: false)
-#set quote(block: true)
+#set text(font: serif)
+#show title: set text(font: sans, cjk-latin-spacing: none)
+#show heading: set text(font: sans)
+#show raw: set text(font: mono)
 #show figure.where(kind: raw): set figure.caption(position: top)
 
-#let fullw(body) = box(width: 100%, align(start, body))
+// #set enum(tight: false)
+// #set quote(block: true)
 
-////////////////////////////////////////////////////////////////
+// -------------------------------------------------------------
 
-#set enum(numbering: "1.")
+// #set enum(numbering: "1.")
 
-= 目的
+#set document(
+  title: [タイトル],
+  author: "ほげほげ大学 ふがふが学域 ぴよぴよ学類 n年\n学籍番号114514　名列番号810\n佐藤 裕也",
+)
+
+#context {
+  set align(center)
+  title()
+  v(.5em)
+  set text(size: 1.1em)
+  document.author.join("，")
+  v(.25em)
+  let date = if document.date == auto { datetime.today() } else { document.date }
+  date.display("[year]年[month padding:none]月[day padding:none]日")
+  v(1em)
+}
+
+= ほげ
+
+あいうえお
+
+== ふが
+
+piyopiyo
+
+#figure(
+  sourcecode[```d
+    import std;
+    auto main() {
+      "hello, world".writeln;
+    }
+  ```],
+  caption: [hello.d],
+)
