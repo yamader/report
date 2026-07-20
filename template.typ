@@ -1,4 +1,7 @@
 #import "@preview/codelst:2.0.2": sourcecode
+// https://github.com/typst/typst/issues/792
+#import "@preview/cjk-spacer:0.2.1": cjk-spacer
+#show: cjk-spacer
 
 #set text(lang: "ja")
 #set page(numbering: "1")
